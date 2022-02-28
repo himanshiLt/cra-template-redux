@@ -2,8 +2,7 @@
 framework: jest
 preRun:
      command:
-        - npm ci
-        - npm run build
+        - npm install
 preMerge:
   pattern:
     - "template/src/features/counter/counterSlice.spec.js"
