@@ -1,0 +1,18 @@
+---
+framework: jest
+preRun:
+     command:
+        - npm ci
+        - npm run build
+preMerge:
+  pattern:
+    - "template/src/features/counter/counterSlice.spec.js"
+    - "template/src/App.test.js"
+postMerge:
+  pattern: 
+    - "template/src/features/counter/counterSlice.spec.js"
+    - "template/src/App.test.js"
+postRun:
+     command:
+        - npm --version
+version: 1.0
